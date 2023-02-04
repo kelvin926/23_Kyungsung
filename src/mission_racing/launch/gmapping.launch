@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+
+    <include file="$(find limo_base)/launch/limo_base.launch"/>
+    <include file="$(find ydlidar_ros_driver)/launch/X2.launch"/>
+
+    <node pkg="gmapping" type="slam_gmapping" name="gmapping">
+        <param name="xmin" value="-10.0"/>
+        <param name="ymin" value="-10.0"/>
+        <param name="xmax" value="10.0"/>
+        <param name="ymax" value="10.0"/>
+    </node>
+
+    <node pkg="rviz" type="rviz" name="gmapping_rviz" args="-d $(find mission_racing)/rviz/gmapping.rviz"/>
+</launch>
+

@@ -1,0 +1,8 @@
+prefix=/home/agilex/catkin_ws/devel
+
+Name: mission_racing
+Description: Description of mission_racing
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
