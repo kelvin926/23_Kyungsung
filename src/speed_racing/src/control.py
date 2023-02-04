@@ -26,7 +26,7 @@ class move_limo:
     def drive_control(self, event):
 # 센터의 x좌표 값은 320이다.
         try:
-            self.off_center = (self.left_x + self.right_x) / 2 - self.ref_x
+            self.off_center = -((self.left_x + self.right_x) / 2 - self.ref_x)
             rospy.loginfo("off_center, lateral_gain = {}, {}".format(self.off_center, self.LATERAL_GAIN))
             drive = Twist()
             drive.linear.x = self.BASE_SPEED
