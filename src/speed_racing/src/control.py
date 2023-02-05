@@ -8,7 +8,7 @@ from geometry_msgs.msg import Twist
 class move_limo:
     def __init__(self):
         rospy.init_node('control', anonymous=True)
-        self.ref_x = 160
+        self.ref_x = 320
         self.BASE_SPEED = 0.2
         self.LATERAL_GAIN = 0.005
 
@@ -45,9 +45,9 @@ class move_limo:
             
     def right_lane_cb(self, data):
         if data.data == -1:
-            self.right_x = 0
+            self.right_x = 320
         else:
-            self.right_x = data.data 
+            self.right_x = data.data + 320 # right lane의 x좌표는 320부터 시작하기 때문.
             
 
 
