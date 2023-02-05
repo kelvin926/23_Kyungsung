@@ -45,9 +45,9 @@ class move_limo:
             
     def right_lane_cb(self, data):
         if data.data == -1:
-            self.right_x = 320
+            self.right_x = self.ref_x
         else:
-            self.right_x = data.data + 320 # right lane의 x좌표는 320부터 시작하기 때문.
+            self.right_x = data.data + self.ref_x # right lane의 x좌표는 320부터 시작하기 때문.
             
 
 
