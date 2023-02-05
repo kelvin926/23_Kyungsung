@@ -1,6 +1,6 @@
 set(_CATKIN_CURRENT_PACKAGE "kusmob_racing")
 set(kusmob_racing_VERSION "0.0.0")
-set(kusmob_racing_MAINTAINER "agilex <agilex@todo.todo>")
+set(kusmob_racing_MAINTAINER "kusmob <kelvin926@korea.ac.kr>")
 set(kusmob_racing_PACKAGE_FORMAT "2")
 set(kusmob_racing_BUILD_DEPENDS "roscpp" "rospy")
 set(kusmob_racing_BUILD_EXPORT_DEPENDS "roscpp" "rospy")
