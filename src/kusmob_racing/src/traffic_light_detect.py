@@ -68,13 +68,13 @@ class TrafficDetection:
         self.green_size = np.sum(self.mask_green)/np.size(self.mask_green)
         self.blue_size = np.sum(self.mask_blue)/np.size(self.mask_blue)
 
-        if (self.red_size >= 50) and (self.red_size > self.green_size) and (self.red_size > self.blue_size):
+        if (self.red_size >= 6) and (self.red_size > self.green_size) and (self.red_size > self.blue_size):
             print("COLOR : RED")
             self.now_color = "red"
-        elif (self.green_size >= 50) and (self.green_size > self.red_size) and (self.green_size > self.blue_size):
+        elif (self.green_size >= 6) and (self.green_size > self.red_size) and (self.green_size > self.blue_size):
             print("COLOR : GREEN")
             self.now_color = "green"
-        elif (self.blue_size >= 50) and (self.blue_size > self.red_size) and (self.blue_size > self.green_size):
+        elif (self.blue_size >= 6) and (self.blue_size > self.red_size) and (self.blue_size > self.green_size):
             print("COLOR : BLUE")
             self.now_color = "blue"
         else:
