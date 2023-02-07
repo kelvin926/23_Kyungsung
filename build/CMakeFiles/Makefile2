@@ -1075,24 +1075,6 @@ clean: kusmob_racing/CMakeFiles/std_msgs_generate_messages_py.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory mission_racing
-
-# Convenience name for "all" pass in the directory.
-mission_racing/all:
-
-.PHONY : mission_racing/all
-
-# Convenience name for "clean" pass in the directory.
-mission_racing/clean:
-
-.PHONY : mission_racing/clean
-
-# Convenience name for "preinstall" pass in the directory.
-mission_racing/preinstall:
-
-.PHONY : mission_racing/preinstall
-
-#=============================================================================
 # Directory level rules for directory navigation/map_server
 
 # Convenience name for "all" pass in the directory.
@@ -2463,24 +2445,6 @@ navigation/map_server/CMakeFiles/_run_tests_map_server_rostest_test_rtest.xml.di
 clean: navigation/map_server/CMakeFiles/_run_tests_map_server_rostest_test_rtest.xml.dir/clean
 
 .PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory speed_racing
-
-# Convenience name for "all" pass in the directory.
-speed_racing/all:
-
-.PHONY : speed_racing/all
-
-# Convenience name for "clean" pass in the directory.
-speed_racing/clean:
-
-.PHONY : speed_racing/clean
-
-# Convenience name for "preinstall" pass in the directory.
-speed_racing/preinstall:
-
-.PHONY : speed_racing/preinstall
 
 #=============================================================================
 # Directory level rules for directory ros_astra_camera

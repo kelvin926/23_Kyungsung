@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+
+    <include file="$(find limo_base)/launch/limo_base.launch"/>
+    <include file="$(find ydlidar_ros_driver)/launch/X2.launch"/>
+    <include file="$(find astra_camera)/launch/dabai_u3.launch"/>
+    <include file="$(find kusmob_racing)/launch/localization.launch"/>
+
+    <node pkg="kusmob_racing" type="kusmob_racing.py" name="kusmob_racing" output="screen"/>
+    <node pkg="kusmob_racing" type="traffic_light_detect.py" name="traffic_light_detect" output="screen"/>
+    <node pkg="kusmob_racing" type="lane_detect.py" name="lane_detect" output="screen"/>
+
+</launch>
+

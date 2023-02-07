@@ -11,6 +11,6 @@
         <param name="ymax" value="10.0"/>
     </node>
 
-    <node pkg="rviz" type="rviz" name="gmapping_rviz" args="-d $(find mission_racing)/rviz/gmapping.rviz"/>
+    <node pkg="rviz" type="rviz" name="gmapping_rviz" args="-d $(find kusmob_racing)/rviz/gmapping.rviz"/>
 </launch>
 
