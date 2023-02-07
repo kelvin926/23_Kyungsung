@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+
+    <!-- comments -->
+    <include file="$(find limo_base)/launch/limo_base.launch"/>
+    <include file="$(find ydlidar_ros_driver)/launch/X2.launch"/>
+
+    <node pkg="mission_racing" type="obstacle_detect.py" name="obstacle_detect" output="screen"/>
+    <node pkg="mission_racing" type="mission_control.py" name="mission_control" output="screen"/>
+
+</launch>

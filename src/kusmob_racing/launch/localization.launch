@@ -4,6 +4,7 @@
     <include file="$(find limo_base)/launch/limo_base.launch"/>
     <include file="$(find ydlidar_ros_driver)/launch/X2.launch"/>
 
+
     <arg name="map_name" default="ggwa_bang.yaml"/>
     
     <node pkg="map_server" type="map_server" name="map_server" output="screen" args="$(find kusmob_racing)/map/$(arg map_name)"/>
@@ -13,6 +14,7 @@
     </node>
 
     <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+
         <rosparam file="$(find kusmob_racing)/param/costmap_common_params.yaml" command="load" ns="global_costmap" />
         <rosparam file="$(find kusmob_racing)/param/costmap_common_params.yaml" command="load" ns="local_costmap" />
         <rosparam file="$(find kusmob_racing)/param/local_costmap_params.yaml" command="load" />
@@ -31,5 +33,3 @@
     <node pkg="rviz" type="rviz" name="localization_rviz" args="-d $(find kusmob_racing)/rviz/localization.rviz"/>
 
 </launch>
-
-
