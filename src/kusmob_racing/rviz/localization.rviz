@@ -134,7 +134,6 @@ Visualization Manager:
       Topic: /particlecloud
       Unreliable: false
       Value: true
-
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
@@ -157,6 +156,14 @@ Visualization Manager:
       Shaft Length: 0.10000000149011612
       Topic: /move_base/GlobalPlanner/plan
       Unreliable: false
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /waypoint
+      Name: Marker
+      Namespaces:
+        basic_shapes: true
+      Queue Size: 100
       Value: true
   Enabled: true
   Global Options:
@@ -195,11 +202,11 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Scale: 72.63472747802734
+      Scale: 119.16671752929688
       Target Frame: <Fixed Frame>
       Value: TopDownOrtho (rviz)
-      X: 0
-      Y: 0
+      X: 0.4507898688316345
+      Y: 0.40681546926498413
     Saved: ~
 Window Geometry:
   Displays:

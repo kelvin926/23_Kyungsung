@@ -1,3 +1,5 @@
+#! /usr/bin/env python
+# -*- coding:utf-8 -*-
 import rospy
 import csv
 from visualization_msgs.msg import Marker
@@ -5,7 +7,7 @@ from move_base_msgs.msg import MoveBaseActionGoal
 
 def callback(data):
     pos = data.goal.target_pose.pose
-    print "{0},{1},0.0,0.0,0.0,{2},{3},".format(pos.position.x,pos.position.y,pos.orientation.z,pos.orientation.w)
+    print ("{0},{1},0.0,0.0,0.0,{2},{3},").format(pos.position.x,pos.position.y,pos.orientation.z,pos.orientation.w)
 
 
 rospy.init_node("waypoint_manager")
@@ -46,9 +48,9 @@ while not rospy.is_shutdown():
             marker_data.color.g = 0.0
             marker_data.color.b = 0.0
             marker_data.color.a = 1.0
-            marker_data.scale.x = 5
-            marker_data.scale.y = 1
-            marker_data.scale.z = 1
+            marker_data.scale.x = 0.5
+            marker_data.scale.y = 0.1
+            marker_data.scale.z = 0.1
 
             marker_data.lifetime = rospy.Duration()
 
@@ -81,9 +83,9 @@ while not rospy.is_shutdown():
             marker_data.color.g = 0.0
             marker_data.color.b = 0.0
             marker_data.color.a = 1.0
-            marker_data.scale.x = 5
-            marker_data.scale.y = 5
-            marker_data.scale.z = 5
+            marker_data.scale.x = 0.5
+            marker_data.scale.y = 0.5
+            marker_data.scale.z = 0.5
 
             marker_data.lifetime = rospy.Duration()
 
