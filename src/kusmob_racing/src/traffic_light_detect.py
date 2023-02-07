@@ -17,7 +17,7 @@ class TrafficDetection:
 
         self.color_king = rospy.Publisher("/traffic_light", String, queue_size=1)
 
-        self.RED_LIGHT_LOW = np.array([150,50,30]) # 빨간불 범위
+        self.RED_LIGHT_LOW = np.array([150,20,100]) # 빨간불 범위
         self.RED_LIGHT_HIGH = np.array([180,255,255])
 
         self.GREEN_LIGHT_LOW = np.array([50,50,30]) # 초록불 범위

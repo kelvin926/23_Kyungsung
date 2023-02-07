@@ -4,20 +4,22 @@
     <include file="$(find limo_base)/launch/limo_base.launch"/>
     <include file="$(find ydlidar_ros_driver)/launch/X2.launch"/>
 
-    <arg name="map_name" default="test.yaml"/>
+
+    <arg name="map_name" default="ggwa_bang.yaml"/>
     
-    <node pkg="map_server" type="map_server" name="map_server" output="screen" args="$(find mission_racing)/map/$(arg map_name)"/>
+    <node pkg="map_server" type="map_server" name="map_server" output="screen" args="$(find kusmob_racing)/map/$(arg map_name)"/>
 
     <node pkg="amcl" type="amcl" name="amcl" output="screen">
         <param name="update_min_d" value="0.1"/>
     </node>
 
     <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
-        <rosparam file="$(find mission_racing)/param/costmap_common_params.yaml" command="load" ns="global_costmap" />
-        <rosparam file="$(find mission_racing)/param/costmap_common_params.yaml" command="load" ns="local_costmap" />
-        <rosparam file="$(find mission_racing)/param/local_costmap_params.yaml" command="load" />
-        <rosparam file="$(find mission_racing)/param/global_costmap_params.yaml" command="load" />
-        <rosparam file="$(find mission_racing)/param/teb_local_planner_params.yaml" command="load" />
+
+        <rosparam file="$(find kusmob_racing)/param/costmap_common_params.yaml" command="load" ns="global_costmap" />
+        <rosparam file="$(find kusmob_racing)/param/costmap_common_params.yaml" command="load" ns="local_costmap" />
+        <rosparam file="$(find kusmob_racing)/param/local_costmap_params.yaml" command="load" />
+        <rosparam file="$(find kusmob_racing)/param/global_costmap_params.yaml" command="load" />
+        <rosparam file="$(find kusmob_racing)/param/teb_local_planner_params.yaml" command="load" />
 
 		<param name="base_global_planner" value="global_planner/GlobalPlanner" />
 		<param name="planner_frequency" value="1.0" />
@@ -28,7 +30,6 @@
         <param name="clearing_rotation_allowed" value="false" /> <!-- Our carlike robot is not able to rotate in place -->
 	</node>
 
-    <node pkg="rviz" type="rviz" name="localization_rviz" args="-d $(find mission_racing)/rviz/localization.rviz"/>
+    <node pkg="rviz" type="rviz" name="localization_rviz" args="-d $(find kusmob_racing)/rviz/localization.rviz"/>
 
 </launch>
-

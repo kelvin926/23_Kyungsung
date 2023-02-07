@@ -86,13 +86,6 @@
 /home/agilex/catkin_ws/build/kusmob_racing/CMakeFiles/roscpp_generate_messages_nodejs.dir
 /home/agilex/catkin_ws/build/kusmob_racing/CMakeFiles/std_msgs_generate_messages_py.dir
 /home/agilex/catkin_ws/build/kusmob_racing/CMakeFiles/test.dir
-/home/agilex/catkin_ws/build/mission_racing/CMakeFiles/install/strip.dir
-/home/agilex/catkin_ws/build/mission_racing/CMakeFiles/edit_cache.dir
-/home/agilex/catkin_ws/build/mission_racing/CMakeFiles/list_install_components.dir
-/home/agilex/catkin_ws/build/mission_racing/CMakeFiles/test.dir
-/home/agilex/catkin_ws/build/mission_racing/CMakeFiles/install/local.dir
-/home/agilex/catkin_ws/build/mission_racing/CMakeFiles/rebuild_cache.dir
-/home/agilex/catkin_ws/build/mission_racing/CMakeFiles/install.dir
 /home/agilex/catkin_ws/build/navigation/map_server/CMakeFiles/install/local.dir
 /home/agilex/catkin_ws/build/navigation/map_server/CMakeFiles/list_install_components.dir
 /home/agilex/catkin_ws/build/navigation/map_server/CMakeFiles/rebuild_cache.dir
@@ -136,13 +129,6 @@
 /home/agilex/catkin_ws/build/navigation/map_server/CMakeFiles/_run_tests_map_server_gtest_map_server_utest.dir
 /home/agilex/catkin_ws/build/navigation/map_server/CMakeFiles/run_tests_map_server_rostest.dir
 /home/agilex/catkin_ws/build/navigation/map_server/CMakeFiles/_run_tests_map_server_rostest_test_rtest.xml.dir
-/home/agilex/catkin_ws/build/speed_racing/CMakeFiles/install/strip.dir
-/home/agilex/catkin_ws/build/speed_racing/CMakeFiles/edit_cache.dir
-/home/agilex/catkin_ws/build/speed_racing/CMakeFiles/list_install_components.dir
-/home/agilex/catkin_ws/build/speed_racing/CMakeFiles/test.dir
-/home/agilex/catkin_ws/build/speed_racing/CMakeFiles/install/local.dir
-/home/agilex/catkin_ws/build/speed_racing/CMakeFiles/rebuild_cache.dir
-/home/agilex/catkin_ws/build/speed_racing/CMakeFiles/install.dir
 /home/agilex/catkin_ws/build/ros_astra_camera/CMakeFiles/install/strip.dir
 /home/agilex/catkin_ws/build/ros_astra_camera/CMakeFiles/edit_cache.dir
 /home/agilex/catkin_ws/build/ros_astra_camera/CMakeFiles/list_devices_node.dir
