@@ -17,7 +17,6 @@ def callback(data):
         make_marker(float(pos.position.x),float(pos.position.y),float(pos.orientation.z),float(pos.orientation.w))
     p.close()
 
-
 rospy.init_node("waypoint_manager")
 
 pub = rospy.Publisher("waypoint", Marker, queue_size = 10)

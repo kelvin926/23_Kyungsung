@@ -8,7 +8,9 @@
 
     <node pkg="kusmob_racing" type="kusmob_racing.py" name="kusmob_racing" output="screen"/>
     <node pkg="kusmob_racing" type="traffic_light_detect.py" name="traffic_light_detect" output="screen"/>
-    <node pkg="kusmob_racing" type="lane_detect.py" name="lane_detect" output="screen"/>
+    <node pkg="kusmob_racing" type="lane_detect_yr.py" name="lane_detect" output="screen"/>
+    <node pkg="kusmob_racing" type="waypoint_move.py" name="waypoint_move" output="screen"/>
+    <node pkg="kusmob_racing" type="waypoint_visualation.py" name="waypoint_visualation" output="screen"/>
 
 </launch>
 
