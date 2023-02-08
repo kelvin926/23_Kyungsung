@@ -17,35 +17,22 @@ class kusmob_car:
         self.LANE_LATERAL_GAIN = 0.005 # 0.005 (라인트레이싱의 조향축 가중치 값)
         self.WAYPOINY_LATERAL_GAIN = 0.005 # 0.005 (웨이포인트의 조향축 가중치 값)
         self.drive_pub = rospy.Publisher("/cmd_vel", Twist, queue_size=1) # limo_base에게 계산된 조향값 전달
-        rospy.Subscriber("/lane/left_lane_x", Int32, self.left_lane_cb)
-        rospy.Subscriber("/lane/right_lane_x", Int32, self.right_lane_cb)
+        rospy.Subscriber("/lane/delta_lane_x", Int32, self.lane_drive_control) # 라인트레이싱의 조향값을 받음
         self.with_lane_control = True # 라인트레이싱을 통해 주행할지 여부 (기본 값 : True)
         self.with_waypoint_control = True # 웨이포인트를 통해 주행할지 여부 (기본 값 : True)
         rospy.Timer(rospy.Duration(0.03), self.total_drive_control) # 0.03초마다 drive_control 함수를 실행
 
 
 #################### 라인트레이싱 관련 함수 ####################
-    def left_lane_cb(self, data):
-        if data.data == -1:
-            self.left_x = 0
-        else:
-            self.left_x = data.data 
-            
-    def right_lane_cb(self, data):
-        if data.data == -1:
-            self.right_x = self.ref_x
-        else:
-            self.right_x = data.data + self.ref_x # right lane의 x좌표는 320부터 시작하기 때문.
 
-    def lane_drive_control(self, event):
+    def lane_drive_control(self, lane_x):
         try:
-            self.lane_off_center = -((self.left_x + self.right_x) / 2 - self.ref_x)
-            rospy.loginfo("lane_off_center = {}, {}".format(self.lane_off_center))
+            self.lane_off_center = lane_x
+            rospy.loginfo("lane_off_center = {}".format(self.lane_off_center))
             self.lane_drive = Twist()
             self.lane_drive.linear.x = self.BASE_SPEED
             self.lane_drive.angular.z = self.lane_off_center * self.LATERAL_GAIN
             # self.drive_pub.publish(lane_drive)
-            # return (self.lane_off_center * self.LANE_LATERAL_GAIN)
         except:
             pass
 
