@@ -73,7 +73,7 @@ class LaneDetection:
         cv2.imshow('down yellow lane image', self.down_yellow_thresholded_image)
         cv2.imshow('down white lane image', self.down_white_thresholded_image)
         cv2.imshow('up yellow lane image', self.up_yellow_thresholded_image)
-        cv2.imshow('down white lane image', self.up_white_thresholded_image)
+        cv2.imshow('up white lane image', self.up_white_thresholded_image)
         cv2.waitKey(1)
             
     def image_crop(self, input_image):
